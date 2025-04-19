@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Baby 💙</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-image: url('https://wallpapercave.com/wp/wp1812056.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white;
+      text-align: center;
+      padding: 100px 20px 20px;
+      overflow-x: hidden;
+      animation: fadeIn 2s ease-out;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 6px #000;
+      animation: slideInFromTop 1.5s ease-out;
+    }
+
+    .btn {
+      font-size: 1.3em;
+      padding: 15px 30px;
+      margin: 15px;
+      border: none;
+      border-radius: 15px;
+      background-color: #6ac7f3;
+      color: white;
+      cursor: pointer;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+      transition: background 0.3s ease;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .btn:hover {
+      background-color: #339edc;
+    }
+
+    .content-box {
+      background-color: rgba(0, 0, 0, 0.65);
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 800px;
+      margin: 30px auto;
+      font-size: 1.3em;
+      line-height: 1.8em;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      animation: fadeIn 2s ease-out;
+      display: none;
+    }
+
+    .countdown {
+      font-size: 1.5em;
+      margin-top: 60px;
+      text-shadow: 2px 2px 4px #000;
+      color: #ff4dff;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: transparent;
+    }
+
+    .star {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: white;
+      border-radius: 50%;
+      animation: move 10s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes move {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInFromTop {
+      0% {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .open-section {
+      display: none;
+      font-size: 1.2em;
+      background-color: rgba(0,0,0,0.7);
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      width: 80%;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      animation: fadeIn 2s ease-out;
+    }
+
+    .open-btn {
+      font-size: 1.2em;
+      padding: 15px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 12px;
+      background-color: #ff4dff;
+      color: white;
+      cursor: pointer;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+      transition: background 0.3s ease;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .open-btn:hover {
+      background-color: #e600e6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="stars"></div>
+
+  <h1>Hi My Love 💙</h1>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" loop>
+    <source src="https://dl.dropboxusercontent.com/scl/fi/1zcmlcuf8y1608irfvr7b/b.mp3.mp3?rlkey=rdskgmcgl0atkruv92s2cewxt&st=4hnvzq7o&dl=0" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Main Buttons -->
+  <button class="btn" onclick="toggleContent('reasons')">Reasons Why I Love You</button>
+  <div id="reasons" class="content-box">
+    <p>
+      - You're my safe place ⭐<br>
+      - You make everything feel better<br>
+      - You always try your best<br>
+      - You care so much<br>
+      - You make me laugh without even trying<br>
+      - You get shy when I compliment you and it's so cute<br>
+      - You make me feel loved and chosen<br>
+      - You never give up on me<br>
+      - You make even boring days fun<br>
+      - You're my favorite everything 💙
+    </p>
+  </div>
+
+  <button class="btn" onclick="toggleContent('letter')">A Letter to You</button>
+  <div id="letter" class="content-box">
+    <p>
+      Hi Hun,<br><br>
+      I just want to remind you how much you mean to me. You are the most important person in my life and I’m so lucky to have you. Thank you for always being there, for loving me through everything, and for being your beautiful, imperfect, perfect self. No matter what happens, I’ll always choose you. Always.<br><br>
+      I love you, my maldita. 💙
+    </p>
+  </div>
+
+  <button class="btn" onclick="toggleContent('openWhen')">Open When Letters 💌</button>
+  <div id="openWhen" class="content-box">
+    <button class="open-btn" onclick="showOpenLetter('openSad')">Open When You're Sad</button>
+    <div id="openSad" class="open-section">
+      <p>Hey baby, I know you're feeling down right now. But I need you to remember how loved you are—by me. I’m hugging you with my heart even if I’m not beside you right now. Wg na iyak pwease. 💙</p>
+    </div>
+
+    <button class="open-btn" onclick="showOpenLetter('openMiss')">Open When You Miss Me</button>
+    <div id="openMiss" class="open-section">
+      <p>I miss you too bading, and I'm thinking of you every moment. Just know that my heart is with you, and I can't wait to hold and touch you again 💙</p>
+    </div>
+
+    <button class="open-btn" onclick="showOpenLetter('openHappy')">Open When You're Happy</button>
+    <div id="openHappy" class="open-section">
+      <p>I'm so happy for you, and I want to celebrate all your victories. Keep shining baby, You're da best!💙</p>
+    </div>
+
+    <button class="open-btn" onclick="showOpenLetter('openSleep')">Open When You Can't Sleep</button>
+    <div id="openSleep" class="open-section">
+      <p>If you're lying awake thinking about everything, just know I’m here with you in spirit (mumultuhin kita, madali ak kausap). Try to sleep na baby, Wg matigas ulo. Try listening to our playlist, ily. 💙</p>
+    </div>
+
+    <button class="open-btn" onclick="showOpenLetter('openReminder')">Open When You Need a Reminder</button>
+    <div id="openReminder" class="open-section">
+      <p>You are strong. You are loved. You are enough. Don’t forget it. 💙</p>
+    </div>
+  </div>
+
+  <div class="countdown" id="countdown"></div>
+
+  <script>
+    // Start audio when user clicks anywhere
+    document.body.addEventListener('click', function () {
+      const audio = document.getElementById('bgMusic');
+      audio.play();
+    });
+
+    function toggleContent(id) {
+      const box = document.getElementById(id);
+      box.style.display = box.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function showOpenLetter(id) {
+      const section = document.getElementById(id);
+      section.style.display = section.style.display === 'block' ? 'none' : 'block';
+    }
+
+    const starCount = 200;
+    for (let i = 0; i < starCount; i++) {
+      let star = document.createElement("div");
+      star.className = "star";
+      star.style.left = Math.random() * 100 + "vw";
+      star.style.top = Math.random() * -100 + "vh";
+      star.style.animationDuration = (5 + Math.random() * 5) + "s";
+      document.querySelector(".stars").appendChild(star);
+    }
+
+    function updateCountdown() {
+      const target = new Date("2026-04-09T00:00:00").getTime();
+      const now = new Date().getTime();
+      const diff = target - now;
+
+      if (diff <= 0) {
+        document.getElementById("countdown").innerText = "It's our special day today! 💕";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("countdown").innerText =
+        `Happy One Year to Us (Yiee): ${days}d ${hours}h ${minutes}m ${seconds}s 🕒`;
+    }
+
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
